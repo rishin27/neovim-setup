@@ -1,4 +1,6 @@
 local set = vim.opt
+require('lualine').setup()
+
 
 set.expandtab = true
 set.smarttab = true

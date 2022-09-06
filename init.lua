@@ -1,4 +1,6 @@
 require('settings')
+require('settings.tree-sitter')
+require('settings.term-config')
 require('packer-config')
 require('colorscheme-config.nightfox')
 require('nvim-tree-config')

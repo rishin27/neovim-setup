@@ -11,4 +11,8 @@ return require'packer'.startup(function()
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'onsails/lspkind.nvim'
     use 'nvim-lualine/lualine.nvim' --  lualine status bar
+    use 'akinsho/toggleterm.nvim'
+    use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
 end)
