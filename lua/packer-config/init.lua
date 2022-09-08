@@ -14,5 +14,5 @@ return require'packer'.startup(function()
     use 'akinsho/toggleterm.nvim'
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-
+    use 'airblade/vim-gitgutter'
 end)
