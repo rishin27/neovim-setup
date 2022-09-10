@@ -13,6 +13,8 @@ return require'packer'.startup(function()
     use 'nvim-lualine/lualine.nvim' --  lualine status bar
     use 'akinsho/toggleterm.nvim'
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use 'romgrk/barbar.nvim'
     use 'airblade/vim-gitgutter'
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'tpope/vim-obsession'
 end)
