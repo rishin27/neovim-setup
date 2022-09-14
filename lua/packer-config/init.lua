@@ -17,4 +17,6 @@ return require'packer'.startup(function()
     use 'airblade/vim-gitgutter'
     use 'nvim-treesitter/nvim-treesitter'
     use 'tpope/vim-obsession'
+    use 'ggandor/leap.nvim'
+    use 'numToStr/Comment.nvim'
 end)
