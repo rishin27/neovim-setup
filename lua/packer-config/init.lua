@@ -19,4 +19,5 @@ return require'packer'.startup(function()
     use 'tpope/vim-obsession'
     use 'ggandor/leap.nvim'
     use 'numToStr/Comment.nvim'
+    use 'morhetz/gruvbox'
 end)
