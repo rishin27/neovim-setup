@@ -29,4 +29,7 @@ map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
-
+-- Debugger
+map('n','<leader>b',":lua require'dap'.toggle_breakpoint()<CR>", opts)
+map('n','<F5>',":lua require'dap'.continue()<CR>", opts)
+map('n','<F10>',":lua require'dap'.step_over()<CR>", opts)

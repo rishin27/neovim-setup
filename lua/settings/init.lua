@@ -19,6 +19,7 @@ set.scrolloff = 20
 set.fileencoding = 'utf-8'
 set.termguicolors = true
 
+set.clipboard = 'unnamedplus'
 
 set.relativenumber = true
 set.number = true

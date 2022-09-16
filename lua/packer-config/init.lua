@@ -20,4 +20,8 @@ return require'packer'.startup(function()
     use 'ggandor/leap.nvim'
     use 'numToStr/Comment.nvim'
     use 'morhetz/gruvbox'
+    use 'williamboman/mason.nvim'
+    use 'mfussenegger/nvim-dap'
+    use 'rcarriga/nvim-dap-ui'
 end)
+
