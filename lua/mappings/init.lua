@@ -33,3 +33,9 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 map('n','<leader>b',":lua require'dap'.toggle_breakpoint()<CR>", opts)
 map('n','<F5>',":lua require'dap'.continue()<CR>", opts)
 map('n','<F10>',":lua require'dap'.step_over()<CR>", opts)
+
+-- DAP-UI
+map('n', '<leader>c',":lua require'dapui'.close()<CR>",opts)
+
+-- Terminal close Remap
+map('t', '<Esc>','<C-\\><C-n>',opts)
