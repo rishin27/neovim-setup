@@ -23,5 +23,6 @@ return require'packer'.startup(function()
     use 'williamboman/mason.nvim'
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
+    use 'vimwiki/vimwiki'
 end)
 

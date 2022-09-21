@@ -97,3 +97,11 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+-- Markdown Lang Server
+local filetypes = { 'markdown', 'vimwiki' }
+require'lspconfig'.marksman.setup{
+    filetypes = filetypes,
+    on_attach = on_attach
+}
+
