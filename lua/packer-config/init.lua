@@ -17,7 +17,6 @@ return require'packer'.startup(function()
     use 'airblade/vim-gitgutter'
     use 'nvim-treesitter/nvim-treesitter'
     use 'tpope/vim-obsession'
-    use 'ggandor/leap.nvim'
     use 'numToStr/Comment.nvim'
     use 'morhetz/gruvbox'
     use 'williamboman/mason.nvim'
@@ -25,5 +24,7 @@ return require'packer'.startup(function()
     use 'rcarriga/nvim-dap-ui'
     use 'vimwiki/vimwiki'
     use 'windwp/nvim-autopairs'
+    use 'stevearc/aerial.nvim'
+    use 'catppuccin/nvim'
 end)
 

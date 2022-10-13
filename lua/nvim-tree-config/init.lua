@@ -23,5 +23,3 @@ nvim_tree_events.subscribe('TreeClose', function()
   bufferline_state.set_offset(0)
 end)
 
--- autopairs
-require('nvim-tree-config.autopairs')
