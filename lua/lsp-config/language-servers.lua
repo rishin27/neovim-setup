@@ -38,70 +38,18 @@ local lsp_flags = {
 }
 
 
--- language server python env
-local util = require('lspconfig/util')
-
-local path = util.path
-
-local function get_python_path(workspace)
-  -- Use activated virtualenv.
-  if vim.env.VIRTUAL_ENV then
-    return path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
-  end
-
-  -- Find and use virtualenv in workspace directory.
-  for _, pattern in ipairs({'*', '.*'}) do
-    local match = vim.fn.glob(path.join(workspace, pattern, 'pyvenv.cfg'))
-    if match ~= '' then
-      return path.join(path.dirname(match), 'bin', 'python')
-    end
-  end
-  -- Fallback to system Python.
-  return exepath('python3') or exepath('python') or 'python'
-end
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
-    -- before_init = function(_, config)
-    --     config.settings.python.pythonPath = get_python_path(config.root_dir)
-    -- end
-}
-require'lspconfig'.clangd.setup{}
 
-
+--python server
+require('lsp-config.lang.python')
+--clang server
+require('lsp-config.lang.cpp')
 --- Lua Lang Server
-require'lspconfig'.sumneko_lua.setup {
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-}
-
+require('lsp-config.lang.lua')
 -- Markdown Lang Server
-local filetypes = { 'markdown', 'vimwiki' }
-require'lspconfig'.marksman.setup{
-    filetypes = filetypes,
-    on_attach = on_attach
-}
+require('lsp-config.lang.markdown')
+--cmake server
+require('lsp-config.lang.cmake')
 

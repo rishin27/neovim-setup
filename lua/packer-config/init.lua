@@ -24,5 +24,6 @@ return require'packer'.startup(function()
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
     use 'vimwiki/vimwiki'
+    use 'windwp/nvim-autopairs'
 end)
 
