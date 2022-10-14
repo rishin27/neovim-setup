@@ -26,5 +26,6 @@ return require'packer'.startup(function()
     use 'windwp/nvim-autopairs'
     use 'stevearc/aerial.nvim'
     use 'catppuccin/nvim'
+    use 'ggandor/leap.nvim'
 end)
 
