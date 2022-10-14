@@ -1,11 +1,10 @@
-
+-- nvim-lsp variables
+local lsp_vars = require("lsp-config.lsp-vars")
 -- language server python env
 local util = require('lspconfig/util')
 
 local path = util.path
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local function get_python_path(workspace)
   -- Use activated virtualenv.
@@ -25,10 +24,7 @@ local function get_python_path(workspace)
 end
 
 require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
-    -- before_init = function(_, config)
-    --     config.settings.python.pythonPath = get_python_path(config.root_dir)
-    -- end
+    on_attach = lsp_vars.on_attach,
+    flags = lsp_vars.lsp_flags,
+    capabilities = lsp_vars.capabilities,
 }

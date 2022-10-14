@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 end
 
 local lsp_flags = {
@@ -41,15 +41,8 @@ local lsp_flags = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-
---python server
-require('lsp-config.lang.python')
---clang server
-require('lsp-config.lang.cpp')
---- Lua Lang Server
-require('lsp-config.lang.lua')
--- Markdown Lang Server
-require('lsp-config.lang.markdown')
---cmake server
-require('lsp-config.lang.cmake')
-
+return {
+    on_attach = on_attach,
+    lsp_flags = lsp_flags,
+    capabilities = capabilities,
+}

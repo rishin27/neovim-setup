@@ -5,7 +5,7 @@ vim.g.mapleader = ' '
 require("mappings.cmd")
 -- lightspeed mappings
 require("mappings.lightspeed")
-map('n', '<leader>f', ':NvimTreeToggle<CR>', opts)
+map('n', '<leader>ee', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>a', ':AerialToggle<CR>', opts)
 map('n', '<leader>s',':PackerSync<CR>',opts)
 map('n', '<leader>l', ':luafile %<CR>',opts)

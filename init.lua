@@ -20,6 +20,6 @@ require('mappings')
 
 -- Debugger LSP stuff
 require('nvim-tree-config')
-require('lsp-config.language-servers')
+require('lsp-config')
 require('lsp-config.cmp-config')
 require('debugger')

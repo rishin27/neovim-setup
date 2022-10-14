@@ -1,6 +1,10 @@
 
+local lsp_vars = require("lsp-config.lsp-vars")
 require'lspconfig'.sumneko_lua.setup {
-  settings = {
+    on_attach = lsp_vars.on_attach,
+    flags = lsp_vars.lsp_flags,
+    capabilities = lsp_vars.capabilities,
+    settings = {
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
