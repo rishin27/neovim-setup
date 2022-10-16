@@ -1,5 +1,5 @@
 local set = vim.opt
-require('lualine').setup()
+require('lualine').setup({})
 
 
 set.expandtab = true

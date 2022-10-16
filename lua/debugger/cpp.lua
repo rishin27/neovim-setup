@@ -38,15 +38,8 @@ dap.configurations.cpp = {
     request = "attach",
     cwd = '${workspaceFolder}',
     pid = require('dap.utils').pick_process,
-   -- miDebuggerPath = '/usr/bin/lldb',
-  },
-  {
-    name = 'Launch Audio host',
-    type = 'codelldb',
-    request = 'launch',
-    program = '/Users/apple/code/audio/JUCE/build/extras/AudioPluginHost/AudioPluginHost_artefacts/AudioPluginHost.app/Contents/MacOS/AudioPluginHost',
-    cwd = '${workspaceFolder}',
     stopOnEntry = false,
-    args = {},
+    args = {}
+   -- miDebuggerPath = '/usr/bin/lldb',
   },
 }

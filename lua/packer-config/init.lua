@@ -27,5 +27,6 @@ return require'packer'.startup(function()
     use 'stevearc/aerial.nvim'
     use 'catppuccin/nvim'
     use 'ggandor/leap.nvim'
+    use 'ms-jpq/coq_nvim'
 end)
 
