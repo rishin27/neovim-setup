@@ -28,5 +28,6 @@ return require'packer'.startup(function()
     use 'catppuccin/nvim'
     use 'ggandor/leap.nvim'
     use 'ms-jpq/coq_nvim'
+    use 'mg979/vim-visual-multi'
 end)
 
