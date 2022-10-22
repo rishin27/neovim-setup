@@ -18,8 +18,8 @@ map('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
 
 
 -- Move to previous/next
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<S-h>', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<S-l>', '<Cmd>BufferNext<CR>', opts)
 
 -- Goto buffer in position...
 map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
