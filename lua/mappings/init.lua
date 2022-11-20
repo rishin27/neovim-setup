@@ -16,6 +16,7 @@ map('n', '<leader>tc', ':Telescope colorscheme<CR>', opts)
 map('n', '<leader>tg', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
 
+map('n', '<S-Tab>', '<C-W><C-W><CR>', opts)
 
 -- Move to previous/next
 map('n', '<S-h>', '<Cmd>BufferPrevious<CR>', opts)
