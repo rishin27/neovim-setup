@@ -9,4 +9,5 @@ require('lsp-config.lang.lua')
 require('lsp-config.lang.markdown')
 --cmake server
 require('lsp-config.lang.cmake')
-
+require('lsp-config.lang.svelte')
+require('lsp-config.lang.ts')
