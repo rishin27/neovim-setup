@@ -7,6 +7,8 @@ require('lsp-config.lang.cpp')
 require('lsp-config.lang.lua')
 -- Markdown Lang Server
 require('lsp-config.lang.markdown')
+require('lsp-config.lang.haskell')
+
 --cmake server
 require('lsp-config.lang.cmake')
 require('lsp-config.lang.svelte')
