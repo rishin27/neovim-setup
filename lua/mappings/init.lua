@@ -10,13 +10,14 @@ map('n', '<leader>a', ':AerialToggle<CR>', opts)
 map('n', '<leader>s',':PackerSync<CR>',opts)
 map('n', '<leader>l', ':luafile %<CR>',opts)
 map('n', '<leader>h', ':noh<CR>',opts)
+map('v', '<leader>r', ':ToggleTermSendVisualLines<CR>', opts)
 map('n', '<leader>tf', ':Telescope find_files<CR>', opts)
 map('n', '<leader>tl', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>tc', ':Telescope colorscheme<CR>', opts)
 map('n', '<leader>tg', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
 
-map('n', '<S-Tab>', '<C-W><C-W><CR>', opts)
+map('n', '<Tab>', '<C-w><C-w>', opts)
 
 -- Move to previous/next
 map('n', '<S-h>', '<Cmd>BufferPrevious<CR>', opts)
@@ -44,4 +45,4 @@ map('n','<F10>',":lua require'dap'.step_over()<CR>", opts)
 map('n', '<leader>c',":lua require'dapui'.close()<CR>",opts)
 
 -- Terminal close Remap
-map('t', '<Esc>','<C-\\><C-n>',opts)
+map('t', '<Tab>','<C-\\><C-n><C-w><C-w>',opts)
