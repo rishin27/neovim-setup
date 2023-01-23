@@ -17,7 +17,7 @@ map('n', '<leader>tc', ':Telescope colorscheme<CR>', opts)
 map('n', '<leader>tg', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
 
-map('n', '<Tab>', '<C-w><C-w>', opts)
+map('n', '<S-Tab>', '<C-w><C-w>', opts)
 
 -- Move to previous/next
 map('n', '<S-h>', '<Cmd>BufferPrevious<CR>', opts)
@@ -45,4 +45,4 @@ map('n','<F10>',":lua require'dap'.step_over()<CR>", opts)
 map('n', '<leader>c',":lua require'dapui'.close()<CR>",opts)
 
 -- Terminal close Remap
-map('t', '<Tab>','<C-\\><C-n><C-w><C-w>',opts)
+map('t', '<S-Tab>','<C-\\><C-n><C-w><C-w>',opts)

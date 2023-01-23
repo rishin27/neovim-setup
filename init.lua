@@ -11,6 +11,7 @@ require('settings.mason-config')
 require('settings.vimwiki')
 require('settings.aerial')
 require('settings.autopairs')
+require('autocmds')
 
 --Default Color Scheme
 require('colorscheme-config.catpuccin')
