@@ -2,8 +2,11 @@ local api = vim.api
 
 local black_isort = function ()
   local buf = api.nvim_buf_get_name(0)
-  os.execute(string.format("black %s",buf))
-  os.execute(string.format("isort %s",buf))
+  local black = string.format("silent !black %s",buf) 
+  local isort = string.format("silent !isort %s",buf)
+  local out
+  api.nvim_exec(black,out)
+  api.nvim_exec(isort,out)
   api.nvim_command('checktime')
 end
 
