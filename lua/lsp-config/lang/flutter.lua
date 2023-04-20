@@ -68,6 +68,7 @@ require("flutter-tools").setup{
     on_attach = lsp_vars.on_attach,
     flags = lsp_vars.lsp_flags,
     capabilities = lsp_vars.capabilities,
+    autostart = true,
     -- see the link below for details on each option:
     -- https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md#client-workspace-configuration
     settings = {
