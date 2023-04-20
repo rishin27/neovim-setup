@@ -16,9 +16,12 @@ map('n', '<leader>tl', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>tc', ':Telescope colorscheme<CR>', opts)
 map('n', '<leader>tg', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
-
 map('n', '<S-Tab>', '<C-w><C-w>', opts)
 
+--ufo Mapping
+
+map('n', 'zO', ':lua require("ufo").openAllFolds()<CR>', opts)
+map('n', 'zC', ':lua require("ufo").closeAllFolds()<CR>', opts)
 -- Move to previous/next
 map('n', '<S-h>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<S-l>', '<Cmd>BufferNext<CR>', opts)

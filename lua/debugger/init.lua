@@ -1,4 +1,4 @@
-require("dapui").setup()
+ require("dapui").setup()
 
 local dapui = require("dapui")
 local dap = require('dap')
@@ -15,6 +15,12 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close({})
 end
 
+REPL = function ()
+  dapui.float_element('repl',{
+  height = 50,
+  enter=  true
+})
+end
 
 -- python
 require('debugger.python')

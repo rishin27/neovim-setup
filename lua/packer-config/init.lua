@@ -29,5 +29,13 @@ return require'packer'.startup(function()
     use 'ggandor/leap.nvim'
     use 'ms-jpq/coq_nvim'
     use 'mg979/vim-visual-multi'
-end)
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use {
+    'akinsho/flutter-tools.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+}
+  end)
 

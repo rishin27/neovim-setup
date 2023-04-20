@@ -12,9 +12,9 @@ require('settings.vimwiki')
 require('settings.aerial')
 require('settings.autopairs')
 require('autocmds')
-
+require('settings.ufo')
 --Default Color Scheme
-require('colorscheme-config.catpuccin')
+require('colorscheme-config.gruvbox')
 
 --Mapping
 require('mappings')
