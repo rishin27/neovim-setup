@@ -75,8 +75,11 @@ require("flutter-tools").setup{
       completeFunctionCalls = true,
       analysisExcludedFolders = {"<path-to-flutter-sdk-packages>"},
       renameFilesWithClasses = "prompt", -- "always"
-      enableSnippets = true,
+      -- enableSnippets = true,
       updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
     }
   }
 }
+
+require'luasnip'.filetype_extend("dart", {"flutter"})
+

@@ -37,5 +37,6 @@ return require'packer'.startup(function()
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
 }
+    use "rafamadriz/friendly-snippets"
   end)
 
