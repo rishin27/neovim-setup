@@ -1,31 +1,11 @@
-local set = vim.opt
+require('settings.global_setting')
 require('lualine').setup({})
-
-
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 2
-set.tabstop = 2
--- set.showmatch =true
--- set.matchtime=3
-
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
-
-set.splitbelow = true
-set.splitright = true
-set.wrap = true
-set.scrolloff = 15 
-set.fileencoding = 'utf-8'
-set.termguicolors = true
-
-set.clipboard = 'unnamedplus'
-
-set.relativenumber = true
-set.number = true
-set.cursorline = true
-
-set.hidden = true
-set.updatetime= 100
+require('settings.tree-sitter')
+require('settings.term-config')
+require('settings.comments')
+require('settings.mason-config')
+require('settings.vimwiki')
+require('settings.aerial')
+require('settings.autopairs')
+require('settings.which_key')
+require('settings.ufo')
