@@ -17,7 +17,7 @@ map('n', '<leader>c', ':Telescope colorscheme<CR>', opts)
 map('n', '<leader>g', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>d', ':Telescope diagnostics<CR>', opts)
 map('n', '<S-Tab>', '<C-w><C-w>', opts)
-
+map('i','<C-l>','<Esc>%%a',opts)
 --ufo Mapping
 
 map('n', 'zO', ':lua require("ufo").openAllFolds()<CR>', opts)
