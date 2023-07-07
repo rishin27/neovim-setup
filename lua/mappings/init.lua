@@ -47,5 +47,15 @@ map('n','<F10>',":lua require'dap'.step_over()<CR>", opts)
 -- DAP-UI
 map('n', '<leader>c',":lua require'dapui'.close()<CR>",opts)
 
+--Move
+--Down
+map('v', "<A-j>" ,":m '>+1<CR>", opts)
+map('i',"<A-j>", ":m .+1<CR>", opts)
+map('n',"<A-j>", ":m .+1<CR>", opts)
+-- UP
+map('v',"<A-k>", ":m '<-2<CR>", opts)
+map('i',"<A-k>", ":m .-2<CR>",opts)
+map('n',"<A-k>", ":m .-2<CR>",opts)
+
 -- Terminal close Remap
 map('t', '<S-Tab>','<C-\\><C-n><C-w><C-w>',opts)
