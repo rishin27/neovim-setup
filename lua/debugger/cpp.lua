@@ -28,7 +28,8 @@ dap.configurations.cpp = {
 		end,
 		cwd = "${workspaceFolder}",
 		miDebuggerPath = "/usr/bin/gdb",
-		stopAtEntry = true,
+		stopAtEntry = false
+    ,
 	},
 	{
 		name = "Attaching Audio Plugin Host",
@@ -41,3 +42,5 @@ dap.configurations.cpp = {
 		-- miDebuggerPath = '/usr/bin/lldb',
 	},
 }
+
+dap.configurations.c = dap.configurations.cpp
