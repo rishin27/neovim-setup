@@ -1,2 +1,2 @@
-require('autocmds.py')
-require('autocmds.dart')
+require("autocmds.py")
+require("autocmds.dart")

@@ -1,9 +1,6 @@
-
 local set = vim.opt
 vim.o.timeout = true
 vim.o.timeoutlen = 300
-
-
 
 set.expandtab = true
 set.smarttab = true
@@ -20,15 +17,15 @@ set.smartcase = true
 set.splitbelow = true
 set.splitright = true
 set.wrap = true
-set.scrolloff = 15 
-set.fileencoding = 'utf-8'
+set.scrolloff = 15
+set.fileencoding = "utf-8"
 set.termguicolors = true
 
-set.clipboard = 'unnamedplus'
+set.clipboard = "unnamedplus"
 
 set.relativenumber = true
 set.number = true
 set.cursorline = true
 
 set.hidden = true
-set.updatetime= 100
+set.updatetime = 100

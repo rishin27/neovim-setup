@@ -1,17 +1,16 @@
-
 --python server
-require('lsp-config.lang.python')
+require("lsp-config.lang.python")
 --clang server
-require('lsp-config.lang.cpp')
+require("lsp-config.lang.cpp")
 --- Lua Lang Server
-require('lsp-config.lang.lua')
+require("lsp-config.lang.lua")
 -- Markdown Lang Server
-require('lsp-config.lang.markdown')
-require('lsp-config.lang.haskell')
+require("lsp-config.lang.markdown")
+require("lsp-config.lang.haskell")
 
 --cmake server
-require('lsp-config.lang.cmake')
-require('lsp-config.lang.svelte')
-require('lsp-config.lang.ts')
-require('lsp-config.lang.tailwindcss')
-require('lsp-config.lang.flutter')
+require("lsp-config.lang.cmake")
+require("lsp-config.lang.svelte")
+require("lsp-config.lang.ts")
+require("lsp-config.lang.tailwindcss")
+require("lsp-config.lang.flutter")
