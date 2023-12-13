@@ -12,7 +12,7 @@ return require("packer").startup(function()
 	use("onsails/lspkind.nvim")
 	use("nvim-lualine/lualine.nvim") --  lualine status bar
 	use("akinsho/toggleterm.nvim")
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } })
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.5", requires = { { "nvim-lua/plenary.nvim" } } })
 	use("romgrk/barbar.nvim")
 	use("airblade/vim-gitgutter")
 	use("nvim-treesitter/nvim-treesitter")
@@ -39,4 +39,17 @@ return require("packer").startup(function()
 	})
 	use("rafamadriz/friendly-snippets")
 	use("folke/which-key.nvim")
+ use({
+  "princejoogie/dir-telescope.nvim",
+  -- telescope.nvim is a required dependency
+  requires = {"nvim-telescope/telescope.nvim"},
+  config = function()
+    require("dir-telescope").setup({
+      -- these are the default options set
+      hidden = true,
+      no_ignore = false,
+      show_preview = true,
+    })
+  end,
+}) 
 end)

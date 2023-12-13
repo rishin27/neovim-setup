@@ -6,7 +6,7 @@ require('packer-config')
 require('settings')
 require('autocmds')
 --Default Color Scheme
-require('colorscheme-config.gruvbox')
+require('colorscheme-config.catpuccin')
 
 --Mapping
 require('mappings')

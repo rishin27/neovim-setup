@@ -10,3 +10,4 @@ map(
 	opts
 )
 map("n", "<leader>cb", ":!ninja -C build<CR>", opts)
+map("n", "md", ":!make d<CR>",opts)

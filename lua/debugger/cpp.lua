@@ -20,7 +20,17 @@ dap.adapters.codelldb = {
 }
 dap.configurations.cpp = {
 	{
-		name = "Launch file Linux",
+		name = "Default Debug",
+		type = "cppdbg",
+		request = "launch",
+		program = "debug/debug",
+		cwd = "${workspaceFolder}",
+		miDebuggerPath = "/usr/bin/gdb",
+		stopAtEntry = false
+    ,
+	},
+	{
+		name = "Debug a bin",
 		type = "cppdbg",
 		request = "launch",
 		program = function()
