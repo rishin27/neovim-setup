@@ -14,3 +14,6 @@ require("lsp-config.lang.svelte")
 require("lsp-config.lang.ts")
 require("lsp-config.lang.tailwindcss")
 require("lsp-config.lang.flutter")
+
+-- rust
+require("lsp-config.lang.rust")

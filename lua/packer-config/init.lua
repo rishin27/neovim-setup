@@ -38,6 +38,7 @@ return require("packer").startup(function()
 		},
 	})
 	use("rafamadriz/friendly-snippets")
+  use ('simrat39/rust-tools.nvim')
 	use("folke/which-key.nvim")
  use({
   "princejoogie/dir-telescope.nvim",
