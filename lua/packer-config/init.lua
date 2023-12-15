@@ -40,6 +40,9 @@ return require("packer").startup(function()
 	use("rafamadriz/friendly-snippets")
   use ('simrat39/rust-tools.nvim')
 	use("folke/which-key.nvim")
+  use('chentoast/marks.nvim')
+  use('christoomey/vim-tmux-navigator')
+  use("kylechui/nvim-surround")
  use({
   "princejoogie/dir-telescope.nvim",
   -- telescope.nvim is a required dependency

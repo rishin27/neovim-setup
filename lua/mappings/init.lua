@@ -1,15 +1,25 @@
+local Util = require('utils')
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 --cmd mapping
 require("mappings.cmd")
 -- lightspeed mappings
-require("mappings.lightspeed")
 require("telescope").load_extension("dir")
+
+vim.keymap.set("n", "<Esc>", function()
+  Util.close_floats()
+  if vim.bo.modifiable then
+    Util.clear_highlights()
+  else
+    if #vim.api.nvim_list_wins() > 1 then
+      return vim.fn.feedkeys("<C-w>c")
+    end
+  end
+end, { desc = "Close floats, clear highlights" })
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>a", ":AerialToggle<CR>", opts)
 map("n", "<leader>s", ":PackerSync<CR>", opts)
-map("n", "<leader>h", ":noh<CR>", opts)
 map("v", "<leader>r", ":ToggleTermSendVisualLines<CR>", opts)
 map("n", "<leader>p", ":Telescope find_files<CR>", opts)
 map("n", "<leader>ld", ":Telescope dir live_grep<CR>", opts)
@@ -17,6 +27,7 @@ map("n", "<leader>lf", ":Telescope dir find_files<CR>", opts)
 map("n", "<leader>co", ":Telescope colorscheme<CR>", opts)
 map("n", "<leader>g", ":Telescope git_commits<CR>", opts)
 map("n", "<leader>d", ":Telescope diagnostics<CR>", opts)
+map("n", "<leader>m", ":Telescope marks<CR>", opts)
 map("n", "<S-Tab>", "<C-w><C-w>", opts)
 map("i", "<C-l>", "<Esc>%%a", opts)
 --ufo Mapping
