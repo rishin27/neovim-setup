@@ -25,11 +25,13 @@ map("n", "<leader>p", ":Telescope find_files<CR>", opts)
 map("n", "<leader>ld", ":Telescope dir live_grep<CR>", opts)
 map("n", "<leader>lf", ":Telescope dir find_files<CR>", opts)
 map("n", "<leader>co", ":Telescope colorscheme<CR>", opts)
-map("n", "<leader>g", ":Telescope git_commits<CR>", opts)
+map("n", "<leader>g", ":lua _lazygit_toggle()<CR>", opts)
+map("n", "<C-t>", ":lua _zsh_toggle()<CR>", opts)
 map("n", "<leader>d", ":Telescope diagnostics<CR>", opts)
 map("n", "<leader>m", ":Telescope marks<CR>", opts)
 map("n", "<S-Tab>", "<C-w><C-w>", opts)
 map("i", "<C-l>", "<Esc>%%a", opts)
+map("i", "<C-b>", "<C-o>caw",opts)
 --ufo Mapping
 
 map("n", "zO", ':lua require("ufo").openAllFolds()<CR>', opts)
@@ -73,4 +75,5 @@ map("i", "<A-k>", ":m .-2<CR>", opts)
 map("n", "<A-k>", ":m .-2<CR>", opts)
 
 -- Terminal close Remap
-map("t", "<S-Tab>", "<C-\\><C-n><C-w><C-w>", opts)
+-- map("t", "<S-Tab>", "<C-\\><C-n><C-w><C-w>", opts)
+map("t", "<esc>", "<C-\\><C-n>", opts)
